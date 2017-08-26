@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Веб студия Nerds</title>
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <nav class="main-nav clearfix">
+
+                <div class="main-nav__logo">
+                    <a href="index.html" title="На  главную"><img src="images/logo.png" height="56" width="139" alt="Logotype"></a>
+                </div>
+
+                <ul class="main-nav__user-items">
+                    <li class="main-nav__user-item">
+                        <a href="#"><i class="icon-basket"></i>Корзина</a>
+                    </li>
+                </ul>
+
+                <ul class="main-nav__items">
+                    <li class="main-nav__item  main-nav__item--active">
+                        <span>Студия</span>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="#">Клиенты</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="catalog.html">Магазин</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+
+            </nav>
+            <section class="slider">
+
+                <input class="slider__input" id="slide-1" type="radio" name="slides" checked>
+                <section class="slide slide__one">
+                    <h1 class="slide__title">Долго, дорого,<br>скрупулезно.</h1>
+                    <p class="slide__content">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+                    <a class="btn btn--slider">УЗНАТЬ БОЛЬШЕ</a>
+                </section>
+
+                <input class="slider__input" id="slide-2" type="radio" name="slides">
+                <section class="slide slide__two">
+                    <h1 class="slide__title">Любите ли вы математику,<br>как любим ее мы?</h1>
+                    <p class="slide__content">Нашим дизайнерам мы удаляем нейроны, ответственные<br>за креатив, чтобы дать им возможность все просчитать</p>
+                    <a class="btn  btn--slider">УЗНАТЬ БОЛЬШЕ</a>
+                </section>
+
+                <input class="slider__input" id="slide-3" type="radio" name="slides">
+                <section class="slide slide__three">
+                    <h1 class="slide__title">Только наркотики,<br>только хардкор!</h1>
+                    <p class="slide__content">Все дизайнерские решения в нашей компании принимаются<br>только под воздействием качественных галлюциногенов</p>
+                    <a class="btn  btn--slider">УЗНАТЬ БОЛЬШЕ</a>
+                </section>
+                <div class="slider-toggles">
+                    <label class="slider__toggle" for="slide-1"><span class="slider__indicator-1"></span></label>
+                    <label class="slider__toggle" for="slide-2"><span class="slider__indicator-2"></span></label>
+                    <label class="slider__toggle" for="slide-3"><span class="slider__indicator-3"></span></label>
+                </div>
+            </section>
+        </div>
+    </header>
+    <main>
+        <section class="features">
+            <div class="container clearfix">
+                <article class="feature__item">
+                    <div class="feature__icon feature__icon--sites"></div>
+                    <h2 class="feature__title">Веб-сайты</h2>
+                    <p class="feature__description">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+                    <a href="#" class="btn btn--feature">ЗАКАЗАТЬ</a>
+                </article>
+                <article class="feature__item">
+                    <div class="feature__icon feature__icon--apps"></div>
+                    <h2 class="feature__title">Приложения</h2>
+                    <p class="feature__description">Покорите топ-10 приложений в AppStore и Google Play</p>
+                    <a href="#" class="btn btn--feature">ЗАКАЗАТЬ</a>
+                </article>
+                <article class="feature__item">
+                    <div class="feature__icon feature__icon--presentations"></div>
+                    <h2 class="feature__title">Презентации</h2>
+                    <p class="feature__description">Вы даже не подозреваете, насколько вы изумительны!</p>
+                    <a href="#" class="btn btn--feature">ЗАКАЗАТЬ</a>
+                </article>
+            </div>
+        </section>
+
+        <div class="index-content">
+            <div class="container">
+                <div class="content-column clearfix">
+                    <div class="content-column__left">
+                        <p class="index-content__title"><b>Мы — маленькая, но гордая дизайн-студия из Краснодара</b></p>
+                        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.</p>
+                    </div>
+                    <div class="content-column__right">
+                        <img src="images/logo-since.png" height="75" width="187" alt="Logotype since">
+                    </div>
+                </div>
+                <div class="content-column clearfix">
+                    <div class="content-column__left">
+                        <h2 class="tasks__title">Выполняем заказы на разработку:</h2>
+                        <ul class="tasks__list">
+                            <li class="tasks__item">Веб-сайтов любой сложности</li>
+                            <li class="tasks__item">Мобильных приложений для iOS и Android</li>
+                            <li class="tasks__item">Слайдшоу и видео для корпоративных презентаций</li>
+                        </ul>
+                    </div>
+                    <div class="content-column__right">
+                        <h2 class="work__title">КАК Мы работаем:</h2>
+                        <ul class="work__list">
+                            <li class="work_item">С самоотдачей 146%</li>
+                            <li class="work_item">Соблюдая сроки на 100%</li>
+                            <li  class="work_item">По предоплате 50%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo">
+            <div class="container clearfix">
+                <div class="logo__item">
+                    <img src="" alt="" height="" width="">
+                </div>
+                <div class="logo__item">
+                    <img src="" alt="" height="" width="">
+                </div>
+                <div class="logo__item">
+                    <img src="" alt="" height="" width="">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="map">
+        <img src="images/map.png" alt="Map address" height="416" width="1199">
+    </div>
+
+    <footer class="page-footer">
+        <div class="container clearfix">
+            <section class="footer-social">
+                <a href="#" class="social-btn social-btn__vk">ВКонтакте</a>
+                <a href="#" class="social-btn social-btn__fb">Facebook</a>
+                <a href="#" class="social-btn social-btn__inst">Instagram</a>
+            </section>
+            <div class="page-footer__discount">
+                <p class="footer-discount__title">Давайте дружить, это выгодно!</p>
+                <p class="footer-discount__content">Скидка 10% для друзей из социальных сетей</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

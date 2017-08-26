@@ -1,0 +1,463 @@
+/*------------ Fonts ------------*/
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: "symbols-nerds";
+    src: url("../fonts/symbols/symbols-nerds.woff") format("woff"),
+    url("../fonts/symbols/symbols-nerds.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+    display: inline-block;
+    width: 1em;
+    margin-right: 0.2em;
+    margin-left: 0.2em;
+
+    font-weight: normal;
+    line-height: 1em;
+    font-family: "symbols-nerds";
+    text-align: center;
+    text-transform: none;
+    text-decoration: inherit;
+    font-style: normal;
+    font-variant: normal;
+
+    speak: none;
+}
+
+.icon-basket::before { content: "\62"; } /* "b" */
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-vk::before { content: "\76"; } /* "v" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-circle::before { content: "\25cb"; } /* "○" */
+.icon-circle-dot::before { content: "\25cf"; } /* "●" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-instagramm::before { content: "📷"; } /* "\1f4f7" */
+
+
+
+/*------------- scaffolder -----------------*/
+html,
+body {
+    min-width: 900px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: #283136;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #fff;
+}
+
+/*центровщик*/
+.container{
+    width: 880px;
+    padding: 0 10px;
+    margin: 0 auto;
+    outline: 2px solid green;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+/*------------header--------------*/
+.page-header{
+    padding-top: 27px;
+    padding-bottom: 1px;
+    background-color: #eee;
+    outline: 2px solid red;
+}
+
+.main-nav{
+    margin-bottom: 43px;
+    outline: 2px solid blue;
+}
+
+.main-nav__logo{
+    float: left;
+    height: 56px;
+    width: 139px;
+    outline: 2px solid red;
+}
+
+.main-nav__logo img{
+    height: 56px;
+    width: 139px;
+}
+
+.main-nav__items{
+    float: right;
+    min-width: 420px;
+    margin: 28px 38px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    outline: 2px solid blue;
+}
+
+.main-nav__item{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 45px;
+}
+
+.main-nav__item:last-child{
+    margin-right: 0;
+}
+
+.main-nav__item a{
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    outline: 2px solid blue;
+}
+
+
+.main-nav__item a:hover{
+    color: #fb565a;
+}
+
+.main-nav__item a:active{
+    color: #000;
+    opacity: .4;
+}
+
+.main-nav__item span{
+    display: block;
+    position: relative;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    outline: 2px solid blue;
+}
+
+.main-nav__item--active span::after,
+.main-nav__item--active a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #fb565a;
+}
+
+
+.main-nav__user-items{
+    float: right;
+    width: 100px;
+    margin: 28px 0 0 0;
+    padding: 0;
+    list-style: none;
+    outline: 2px solid blue;
+}
+
+.main-nav__item{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main-nav__user-item a{
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    outline: 2px solid blue;
+}
+
+.main-nav__user-item a:hover {
+    color: #fb565a;
+}
+
+.main-nav__user-item a:active {
+    opacity: .4;
+}
+
+.main-nav__user-item .icon-basket{
+    margin-right: 15px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #a6a6a6;
+}
+
+.main-nav__user-item a:hover .icon-basket{
+    color: #fb565a;
+}
+
+
+.main-nav__user-item a:active .icon-basket{
+    color: #000000;
+    opacity: .4;
+}
+
+
+.page-header__title{
+    width: 700px;
+    min-height: 90px;
+    padding-top: 24px;
+    margin: 0 auto 86px;
+    outline: 2px solid yellow;
+}
+
+/*===========slider============*/
+.slider{
+    position: relative;
+    min-height: 310px;
+    overflow: hidden;
+    outline: 2px solid yellow;
+}
+
+.slide__title{
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 500;
+    margin: 30px 0 18px 0;
+    padding: 0;
+}
+
+.slide__content{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    margin: 0 0 27px 0;
+    padding: 0;
+}
+
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    color: #fff;
+    line-height: 18px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.btn--slider{
+    width: 220px;
+    background-color: #fb565a;
+}
+
+.slider__input{
+    display: none;
+}
+
+.slide{
+    position: absolute;
+    height: 100%;
+    width: 480px;
+    padding-right: 400px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slide__one{
+    background: url('../images/slide-1.png') no-repeat right 10px;
+}
+
+.slide__two{
+    background: url('../images/slide-2.png') no-repeat 640px 13px;
+}
+
+.slide__three{
+    background: url('../images/slide-3.png') no-repeat right -10px;
+}
+
+
+.slider__input:checked + .slide{
+    opacity: 1;
+}
+
+
+.slider-toggles{
+    position: absolute;
+    top: 205px;
+    height: 10px;
+    left: 406px;
+    z-index: 120;
+    font-size: 0;
+    outline: 2px solid red;
+}
+
+.slider__toggle{
+    margin-right: 10px;
+}
+
+.slider__toggle span{
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    margin-right: 9px;
+    cursor: pointer;
+}
+
+.slider__toggle span:last-child{
+    margin-right: 0;
+}
+
+#slide-1:checked ~ .slider-toggles .slider__indicator-1::after,
+#slide-2:checked ~ .slider-toggles .slider__indicator-2::after,
+#slide-3:checked ~ .slider-toggles .slider__indicator-3::after{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #c1c1c1;
+}
+
+/*------------main--------------*/
+main{
+    padding-top: 80px;
+    padding-bottom: 85px;
+    outline: 2px solid red;
+}
+
+.page-inner main{
+    padding-top: 77px;
+    padding-bottom: 70px;
+}
+
+
+/*----------- features -------------*/
+.features{
+    padding-bottom: 80px;
+    margin-bottom: 58px;
+    border-bottom: 2px solid #eeeeee;
+    outline: 2px solid blue;
+}
+
+.feature__item{
+    float: left;
+    width: 240px;
+    min-height: 300px;
+    margin-right: 80px;
+    outline: 2px solid yellow;
+}
+
+.feature__item:last-child{
+    margin-right: 0;
+}
+
+
+/*index-content*/
+
+.index-content{
+    min-height: 344px;
+    padding-bottom: 36px;
+    margin-bottom: 46px;
+    border-bottom: 2px solid #eeeeee;
+    outline: 2px solid blue;
+}
+
+.content-column{
+    margin-bottom: 45px;
+    outline: 2px solid blue;
+}
+
+.content-column__left{
+    float: left;
+    width: 590px;
+    min-height: 144px;
+    outline: 2px solid yellow;
+}
+
+.content-column__right{
+    float: right;
+    width: 240px;
+    min-height: 144px;
+    outline: 2px solid yellow;
+}
+
+.logo{
+    outline: 2px solid blue;
+}
+
+.logo__item{
+    float: left;
+    min-height: 90px;
+    width: 220px;
+    margin-right: 100px;
+    margin-bottom: 33px;
+    outline: 2px solid yellow;
+}
+
+.logo__item:last-child{
+    margin-right: 20px;
+}
+
+/*------------map--------------*/
+.map{
+    min-height: 416px;
+    width: 100%;
+    outline: 2px solid red;
+}
+
+/*------------footer--------------*/
+.page-footer{
+    padding: 75px 0;
+    outline: 2px solid red;
+}
+
+.footer-social{
+    float: left;
+    min-height: 63px;
+    width: 240px;
+    outline: 2px solid yellow;
+}
+
+.page-footer__discount{
+    float: right;
+    min-height: 63px;
+    width: 560px;
+    outline: 2px solid yellow;
+}
+
+.option{
+    float: left;
+    min-height: 732px;
+    width: 240px;
+    outline: 2px solid yellow;
+}
+
+.example{
+    float: right;
+    min-height: 1140px;
+    width: 560px;
+    outline: 2px solid yellow;
+}
+
+
+
