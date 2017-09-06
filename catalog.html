@@ -3,68 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>Веб студия Nerds</title>
 </head>
-<body class="page-inner">
+<body class="inner-page">
 <header class="page-header">
     <div class="container">
         <nav class="main-nav clearfix">
+
             <div class="main-nav__logo">
-                <a href="index.html" title="На  главную">
-                    <img src="images/logo.png" height="56" width="139" alt="Logotype">
-                </a>
+                <a href="index.html" title="На  главную"><img src="images/logo.png" height="56" width="139" alt="Logotype"></a>
             </div>
+
+            <ul class="main-nav__user-items">
+                <li class="main-nav__user-item">
+                    <a href="#"><i class="icon-basket"></i>Корзина</a>
+                </li>
+            </ul>
+
             <ul class="main-nav__items">
-                <li class="main-nav__item">
-                    <a href="">Студия</a>
+                <li class="main-nav__item  main-nav__item--active">
+                    <span>Студия</span>
                 </li>
                 <li class="main-nav__item">
                     <a href="#">Клиенты</a>
                 </li>
-                <li class="main-nav__item--active">
-                    <span>Магазин</span>
+                <li class="main-nav__item">
+                    <a href="catalog.html">Магазин</a>
                 </li>
                 <li class="main-nav__item">
                     <a href="#">Контакты</a>
                 </li>
             </ul>
-            <ul class="main-nav__user-items">
-                <li class="main-nav__user-item">
-                    <a href="#">Корзина</a>
-                </li>
-            </ul>
+
         </nav>
         <h1 class="page-header__title">
             Добро пожаловать в магазин<br>готовых макетов
         </h1>
     </div>
 </header>
+
 <main>
     <section class="site-selection">
         <div class="container clearfix">
-            <div class="option">
+            <div class="options">
                 <form action="formdata.php" method="post" name="option__form">
 
-                    <!-- -->
-                    <fieldset class="option__range">
+                    <!-- range -->
+                    <fieldset class="option">
                         <legend class="option__title">Стоимость:</legend>
                         <div class="range__view">
-
+                            <div class="range__thumb">
+                                <div class="range__min"></div>
+                                <div class="range__max"></div>
+                            </div>
                         </div>
                         <div class="option__range-borders">
-                            <label>от <input type="number" class="range__value"></label>
-                            <label>до <input type="number" class="range__value"></label>
+                            <label><span>от</span> <input type="number" class="range__value"></label>
+                            <label><span>до</span> <input type="number" class="range__value"></label>
                         </div>
                     </fieldset>
 
                     <!-- grid-block-->
-                    <fieldset class="option__grid-block">
+                    <fieldset class="option">
                         <legend class="option__title">Сетка:</legend>
                         <ul class="option__items">
                             <li class="option__item">
                                 <label class="option__grid-label">
-                                    <input class="option__grid-toggle" type="radio" name="grid">
+                                    <input class="option__grid-toggle" type="radio" name="grid" checked>
                                     <span class="option__grid-indicator"></span>
                                     <span class="option__grid-name">Адаптивная</span>
                                 </label>
@@ -87,43 +94,28 @@
                     </fieldset>
 
                     <!-- feature-block-->
-                    <fieldset class="option__feature-block">
+                    <fieldset class="option">
                         <legend class="option__title">Особенности:</legend>
                         <ul class="option__items">
                             <li class="option__item">
-                                <label class="option__feature-label">
-                                    <input class="option__feature-checkbox" type="checkbox" name="">
-                                    <span class="option__feature-indicator"></span>
-                                    <span class="option__features-name">Слайдер</span>
-                                </label>
+                                <input class="option__feature-checkbox" id="slider" type="checkbox" name="" checked>
+                                <label class="option__feature-label" for="slider">Слайдер</label>
                             </li>
                             <li class="option__item">
-                                <label class="option__feature-label">
-                                    <input class="option__feature-checkbox" type="checkbox" name="">
-                                    <span class="option__feature-indicator"></span>
-                                    <span class="option__features-name">Блок преимуществ</span>
-                                </label>
+                                <input class="option__feature-checkbox" id="advantage" type="checkbox" name="">
+                                <label class="option__feature-label" for="advantage">Блок преимуществ</label>
                             </li>
                             <li class="option__item">
-                                <label class="option__feature-label">
-                                    <input class="option__feature-checkbox" type="checkbox" name="">
-                                    <span class="option__feature-indicator"></span>
-                                    <span class="option__features-name">Новости</span>
-                                </label>
+                                <input class="option__feature-checkbox" id="news" type="checkbox" name="" checked>
+                                <label class="option__feature-label" for="news">Новости</label>
                             </li>
                             <li class="option__item">
-                                <label class="option__feature-label">
-                                    <input class="option__feature-checkbox" type="checkbox" name="">
-                                    <span class="option__feature-indicator"></span>
-                                    <span class="option__features-name">Галерея</span>
-                                </label>
+                                <input class="option__feature-checkbox" id="gallery" type="checkbox" name="">
+                                <label class="option__feature-label" for="gallery">Галерея</label>
                             </li>
                             <li class="option__item">
-                                <label class="option__feature-label">
-                                    <input class="option__feature-checkbox" type="checkbox" name="">
-                                    <span class="option__feature-indicator"></span>
-                                    <span class="option__features-name">Корзина</span>
-                                </label>
+                                <input class="option__feature-checkbox" id="basket" type="checkbox" name="">
+                                <label class="option__feature-label" for="basket">Корзина</label>
                             </li>
                         </ul>
                     </fieldset>
@@ -134,11 +126,11 @@
             <div class="example">
                 <div class="sort">
                     <div class="sort__title">
-                        СОРТИРОВАТЬ
+                        СОРТИРОВАТЬ:
                     </div>
                     <ul class="sort__items">
                         <li class="sort__item">
-                            <a href="#">ПО ЦЕНЕ</a>
+                            <span class="active">ПО ЦЕНЕ</span>
                         </li>
                         <li class="sort__item">
                             <a href="#">ПО ТИПУ</a>
@@ -146,52 +138,95 @@
                         <li class="sort__item">
                             <a href="#">ПО ФУНКЦИОНАЛУ</a>
                         </li>
-                        <li class="sort__item">
-                        <span>
-                            <a href="#" class="icon-up-dir"></a>
-                        </span>
-                            <span>
+                    </ul>
+
+
+                    <ul class="sort__toggle-items">
+                        <li class="sort__toggle-item">
+                            <span class="icon-up-dir  active"></span>
+                        </li>
+                        <li class="sort__toggle-item">
                             <a href="#" class="icon-down-dir"></a>
-                        </span>
                         </li>
                     </ul>
                 </div>
+
                 <div class="example__items">
                     <div class="example__item">
+                        <div class="example__item-info">
+                            <div class="example__item-title">AVIATOR</div>
+                            <p class="example__item-content">Одностраничный макет с авторским дизайном</p>
+                            <a class="btn btn--example-item" href="#">8000 P.</a>
+                        </div>
                         <a href="#">
-                            <img class="example__img" src="images/" alt="" height="" width="">
+                            <div class="example__item-header">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <img class="example__img" src="images/Aviator.jpg" alt="Aviator" height="240" width="240">
+                        </a>
+                    </div>
+                    <div class="example__item">
+                        <div class="example__item-info">
+                            <div class="example__item-title">Sunset</div>
+                            <p class="example__item-content">Интернет-магазин с личным кабинетом</p>
+                            <a class="btn btn--example-item" href="#">10000 P.</a>
+                        </div>
+                        <a href="#">
+                            <div class="example__item-header">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <img class="example__img" src="images/Sunset.jpg" alt="Sunset" height="240" width="240">
                         </a>
                     </div>
                     <div class="example__item">
                         <a href="#">
-                            <img class="example__img" src="images/" alt="" height="" width="">
+                            <div class="example__item-header">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <img class="example__img" src="images/Forte.jpg" alt="Forte" height="240" width="240">
                         </a>
                     </div>
                     <div class="example__item">
                         <a href="#">
-                            <img class="example__img" src="images/" alt="" height="" width="">
+                            <div class="example__item-header">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <img class="example__img" src="images/Marq.jpg" alt="Marq" height="240" width="240">
                         </a>
                     </div>
                     <div class="example__item">
                         <a href="#">
-                            <img class="example__img" src="images/" alt="" height="" width="">
+                            <div class="example__item-header">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <img class="example__img" src="images/Avenue.jpg" alt="Avenue" height="240" width="239">
                         </a>
                     </div>
                     <div class="example__item">
                         <a href="#">
-                            <img class="example__img" src="images/" alt="" height="" width="">
-                        </a>
-                    </div>
-                    <div class="example__item">
-                        <a href="#">
-                            <img class="example__img" src="images/" alt="" height="" width="">
+                            <div class="example__item-header">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <img class="example__img" src="images/Dovetail.jpg" alt="Dovetail" height="240" width="239">
                         </a>
                     </div>
                 </div>
                 <div class="pagination">
                     <ul class="pagination__items">
                         <li class="pagination__item">
-                            <a href="#">1</a>
+                            <span>1</span>
                         </li>
                         <li class="pagination__item">
                             <a href="#">2</a>
@@ -208,6 +243,8 @@
         </div>
     </section>
 </main>
+
+
 <div class="map">
     <img src="images/map.png" alt="Map address" height="416" width="1199">
 </div>
@@ -215,9 +252,9 @@
 <footer class="page-footer">
     <div class="container clearfix">
         <section class="footer-social">
-            <a href="#" class="social-btn social-btn__vk">ВКонтакте</a>
-            <a href="#" class="social-btn social-btn__fb">Facebook</a>
-            <a href="#" class="social-btn social-btn__inst">Instagram</a>
+            <a href="#" class="social-btn social-btn--vk">ВКонтакте</a>
+            <a href="#" class="social-btn social-btn--fb">Facebook</a>
+            <a href="#" class="social-btn social-btn--inst">Instagram</a>
         </section>
         <div class="page-footer__discount">
             <p class="footer-discount__title">Давайте дружить, это выгодно!</p>
