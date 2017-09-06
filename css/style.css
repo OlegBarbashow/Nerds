@@ -12,8 +12,8 @@
 [class*=" icon-"]::before {
     display: inline-block;
     width: 1em;
-    margin-right: 0em;
-    margin-left: 0em;
+    margin-right: 0;
+    margin-left: 0;
 
     font-weight: normal;
     line-height: 1em;
@@ -495,12 +495,12 @@ main{
     padding-bottom: 23px;
 }
 
-.working-conditions--left{
+.working-conditions__left{
     width: 560px;
     float: left;
 }
 
-.working-conditions--right{
+.working-conditions__right{
     width: 240px;
     float: right;
 }
@@ -608,7 +608,6 @@ main{
 /*------------footer--------------*/
 .page-footer{
     padding: 75px 0;
-    outline: 2px solid red;
 }
 
 .footer-social{
@@ -697,7 +696,6 @@ main{
 .options{
     float: left;
     width: 240px;
-    outline: 2px solid yellow;
 }
 .option{
     border: 0;
@@ -768,7 +766,6 @@ main{
 .option__range-borders{
     width: 240px;
     font-size: 0;
-    outline: 2px solid yellow;
 }
 
 .option__range-borders label{
@@ -987,7 +984,6 @@ main{
     min-height: 1140px;
     width: 560px;
     font-size: 0;
-    outline: 2px solid yellow;
 }
 
 .sort{
@@ -1277,96 +1273,3 @@ main{
 .inner-page main{
     padding-bottom: 67px;
 }
-
-/*=====================Inputs=================*/
-/*---------------------Sprites----------------*/
-/*
-input[type="checkbox"]{
-    display: none;
-}
-
-input[type="checkbox"] + label{
-    position: relative;
-    padding-left: 30px;
-    line-height: 23px;
-    cursor: pointer;
-}
-
-input[type="checkbox"] + label::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 27px;
-    height: 23px;
-    background: url(../images/sprites/spritesheet.png) no-repeat -2px -29px;
-}
-
-input[type="checkbox"]:checked + label::before{
-    background: url(../images/sprites/spritesheet.png) no-repeat -2px -2px;
-}
-
-
-
-.sprite {
-    background-image: url(spritesheet.png);
-    background-repeat: no-repeat;
-    display: block;
-}
-
-.sprite--icon-check-on-copy {
-    width: 27px;
-    height: 23px;
-    background-position: -2px -2px;
-}
-
-.sprite-icon-check-off-copy {
-    width: 23px;
-    height: 23px;
-    background-position: -2px -29px;
-}
-
-.sprite-icon-circle {
-    width: 25px;
-    height: 25px;
-    background-position: -2px -56px;
-}
-
-.sprite-icon-circle-dot {
-    width: 25px;
-    height: 25px;
-    background-position: -2px -85px;
-}
-
-*/
-
-/*--------------Icon fonts-------------*/
-/*
-input[type="checkbox"]{
-    display: none;
-}
-
-
-input[type="checkbox"] + label{
-  line-height: 23px;
-}
-
-input[type="checkbox"] + label::before{
-    display: inline-block;
-    vertical-align: top;
-    width: 27px;
-    margin-right: 0;
-    line-height: 23px;
-    font-family: "symbols-nerds";
-    font-size: 23px;
-    content: "\2610";
-    color: #c1c1c1;
-}
-*/
-/*
-input[type="checkbox"]:checked + label::before{
-    content: "\2611";
-}
-
-*/
