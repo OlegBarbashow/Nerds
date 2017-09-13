@@ -164,9 +164,7 @@
 
     </main>
 
-    <div class="map">
-        <img src="images/map.png" alt="Map address" height="416" width="1199">
-    </div>
+    <div class="map"></div>
 
     <footer class="page-footer">
         <div class="container clearfix">
@@ -181,5 +179,28 @@
             </div>
         </div>
     </footer>
+    <div class="modal-content">
+        <button class="modal-content__close" type="button" title="Закрыть">Закрыть</button>
+        <form class="modal-content__form" method="post" action="formdata.php">
+            <div class="modal-content__items  modal-content__items--left">
+                <label class="modal-content__item">
+                    <span class="modal-content__field-title">Ваше имя:</span>
+                    <input type="text" name="userName" placeholder="Представьтесь, пожалуйста">
+                </label>
+            </div>
+            <div class="modal-content__items  modal-content__items--right">
+                <label class="modal-content__item">
+                    <span class="modal-content__field-title">Ваш e-mail:</span>
+                    <input type="text" name="userName" placeholder="Для отправки ответа">
+                </label>
+            </div>
+            <label class="modal-content__item">
+                <span class="modal-content__field-title">Текст письма:</span>
+                <textarea>В свободной форме</textarea>
+            </label>
+            <button class="btn btn--max_width">Войти</button>
+        </form>
+    </div>
+    <div class="modal-overlay"></div>
 </body>
 </html>
