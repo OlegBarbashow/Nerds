@@ -1292,6 +1292,7 @@ main{
 
 /*----------------Modal-content-----------------*/
 .modal-content{
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1405,6 +1406,7 @@ main{
 
 /*-----------------Overlay-------------*/
 .modal-overlay{
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
